@@ -44,10 +44,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(472, 77);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(228, 26);
+            this.label1.Size = new System.Drawing.Size(250, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registros de Operações:";
             // 
@@ -106,51 +106,53 @@
             // 
             // Btn_liberar
             // 
-            this.Btn_liberar.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_liberar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.Btn_liberar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Btn_liberar.Location = new System.Drawing.Point(12, 194);
             this.Btn_liberar.Name = "Btn_liberar";
             this.Btn_liberar.Size = new System.Drawing.Size(103, 38);
             this.Btn_liberar.TabIndex = 3;
             this.Btn_liberar.Text = "Liberar";
-            this.Btn_liberar.UseVisualStyleBackColor = true;
+            this.Btn_liberar.UseVisualStyleBackColor = false;
             // 
             // Btn_block
             // 
-            this.Btn_block.Font = new System.Drawing.Font("Cambria", 12F);
+            this.Btn_block.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Btn_block.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Btn_block.Location = new System.Drawing.Point(162, 194);
             this.Btn_block.Name = "Btn_block";
             this.Btn_block.Size = new System.Drawing.Size(103, 38);
             this.Btn_block.TabIndex = 4;
             this.Btn_block.Text = "Bloquear";
-            this.Btn_block.UseVisualStyleBackColor = true;
+            this.Btn_block.UseVisualStyleBackColor = false;
             // 
             // Lbl_credentials
             // 
             this.Lbl_credentials.AutoSize = true;
-            this.Lbl_credentials.Font = new System.Drawing.Font("Constantia", 15.75F);
+            this.Lbl_credentials.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_credentials.Location = new System.Drawing.Point(84, 39);
             this.Lbl_credentials.Name = "Lbl_credentials";
-            this.Lbl_credentials.Size = new System.Drawing.Size(124, 26);
+            this.Lbl_credentials.Size = new System.Drawing.Size(132, 25);
             this.Lbl_credentials.TabIndex = 5;
             this.Lbl_credentials.Text = "Credenciais:";
             // 
             // Lbl_user
             // 
             this.Lbl_user.AutoSize = true;
-            this.Lbl_user.Font = new System.Drawing.Font("Constantia", 13.75F);
+            this.Lbl_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_user.Location = new System.Drawing.Point(13, 89);
             this.Lbl_user.Name = "Lbl_user";
-            this.Lbl_user.Size = new System.Drawing.Size(79, 23);
+            this.Lbl_user.Size = new System.Drawing.Size(92, 25);
             this.Lbl_user.TabIndex = 6;
             this.Lbl_user.Text = "Usuário:";
             // 
             // Lbl_role
             // 
             this.Lbl_role.AutoSize = true;
-            this.Lbl_role.Font = new System.Drawing.Font("Constantia", 13.75F);
+            this.Lbl_role.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.Lbl_role.Location = new System.Drawing.Point(16, 135);
             this.Lbl_role.Name = "Lbl_role";
-            this.Lbl_role.Size = new System.Drawing.Size(63, 23);
+            this.Lbl_role.Size = new System.Drawing.Size(76, 25);
             this.Lbl_role.TabIndex = 7;
             this.Lbl_role.Text = "Cargo:";
             // 

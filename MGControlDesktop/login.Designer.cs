@@ -33,7 +33,7 @@
             this.Txt_email = new System.Windows.Forms.TextBox();
             this.Txt_pwd = new System.Windows.Forms.TextBox();
             this.Btn_login = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Lbl_appTitle = new System.Windows.Forms.Label();
             this.Btn_register = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -90,17 +90,17 @@
             this.Btn_login.UseVisualStyleBackColor = true;
             this.Btn_login.Click += new System.EventHandler(this.Btn_login_Click);
             // 
-            // label1
+            // Lbl_appTitle
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(239, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(323, 37);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "MGControl Desktop";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Lbl_appTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Lbl_appTitle.AutoSize = true;
+            this.Lbl_appTitle.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_appTitle.Location = new System.Drawing.Point(239, 38);
+            this.Lbl_appTitle.Name = "Lbl_appTitle";
+            this.Lbl_appTitle.Size = new System.Drawing.Size(323, 37);
+            this.Lbl_appTitle.TabIndex = 5;
+            this.Lbl_appTitle.Text = "MGControl Desktop";
+            this.Lbl_appTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Btn_register
             // 
@@ -119,7 +119,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Btn_register);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Lbl_appTitle);
             this.Controls.Add(this.Btn_login);
             this.Controls.Add(this.Txt_pwd);
             this.Controls.Add(this.Txt_email);
@@ -141,7 +141,7 @@
         private System.Windows.Forms.TextBox Txt_email;
         private System.Windows.Forms.TextBox Txt_pwd;
         private System.Windows.Forms.Button Btn_login;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Lbl_appTitle;
         private System.Windows.Forms.Button Btn_register;
     }
 }

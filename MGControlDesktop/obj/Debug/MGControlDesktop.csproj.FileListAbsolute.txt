@@ -18,3 +18,14 @@ C:\Users\ruff\source\repos\MGControlDesktop\MGControlDesktop\obj\Debug\MGControl
 C:\Users\ruff\source\repos\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.csproj.CoreCompileInputs.cache
 C:\Users\ruff\source\repos\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.exe
 C:\Users\ruff\source\repos\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.pdb
+C:\Users\ruff\Documents\MGControlDesktop\MGControlDesktop\bin\Debug\MGControlDesktop.exe.config
+C:\Users\ruff\Documents\MGControlDesktop\MGControlDesktop\bin\Debug\MGControlDesktop.exe
+C:\Users\ruff\Documents\MGControlDesktop\MGControlDesktop\bin\Debug\MGControlDesktop.pdb
+C:\Users\ruff\Documents\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.csproj.AssemblyReference.cache
+C:\Users\ruff\Documents\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.login.resources
+C:\Users\ruff\Documents\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.Monitoring.resources
+C:\Users\ruff\Documents\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.Properties.Resources.resources
+C:\Users\ruff\Documents\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.csproj.GenerateResource.cache
+C:\Users\ruff\Documents\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.csproj.CoreCompileInputs.cache
+C:\Users\ruff\Documents\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.exe
+C:\Users\ruff\Documents\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.pdb
