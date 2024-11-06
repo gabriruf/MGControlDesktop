@@ -34,7 +34,6 @@
             this.Txt_pwd = new System.Windows.Forms.TextBox();
             this.Btn_login = new System.Windows.Forms.Button();
             this.Lbl_appTitle = new System.Windows.Forms.Label();
-            this.Btn_register = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Lbl_email
@@ -82,7 +81,7 @@
             // 
             this.Btn_login.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Btn_login.Font = new System.Drawing.Font("Consolas", 15.75F);
-            this.Btn_login.Location = new System.Drawing.Point(259, 282);
+            this.Btn_login.Location = new System.Drawing.Point(350, 285);
             this.Btn_login.Name = "Btn_login";
             this.Btn_login.Size = new System.Drawing.Size(120, 70);
             this.Btn_login.TabIndex = 4;
@@ -102,23 +101,11 @@
             this.Lbl_appTitle.Text = "MGControl Desktop";
             this.Lbl_appTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Btn_register
-            // 
-            this.Btn_register.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Btn_register.Font = new System.Drawing.Font("Consolas", 15.75F);
-            this.Btn_register.Location = new System.Drawing.Point(403, 282);
-            this.Btn_register.Name = "Btn_register";
-            this.Btn_register.Size = new System.Drawing.Size(131, 70);
-            this.Btn_register.TabIndex = 6;
-            this.Btn_register.Text = "Registrar";
-            this.Btn_register.UseVisualStyleBackColor = true;
-            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Btn_register);
             this.Controls.Add(this.Lbl_appTitle);
             this.Controls.Add(this.Btn_login);
             this.Controls.Add(this.Txt_pwd);
@@ -142,7 +129,6 @@
         private System.Windows.Forms.TextBox Txt_pwd;
         private System.Windows.Forms.Button Btn_login;
         private System.Windows.Forms.Label Lbl_appTitle;
-        private System.Windows.Forms.Button Btn_register;
     }
 }
 

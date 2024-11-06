@@ -11,6 +11,9 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Reflection;
 using System.IO;
+using Npgsql;
+using NpgsqlTypes;
+using BCrypt;
 
 namespace MGControlDesktop {
     public partial class login : Form {
@@ -19,9 +22,14 @@ namespace MGControlDesktop {
             InitializeComponent();
         }
 
+        public NpgsqlConnection sqlConn;
+        public NpgsqlCommand sqlCmd;
+        public NpgsqlDataReader sqlRead;
+        public string sqlStrConn = "Server=localhost;Port=5432;Username=postgres;password=pirocudo;Database=mgcontrol";
+        public string sqlStrCode = "";
+
         private PrivateFontCollection mainFont = new PrivateFontCollection();
         private readonly string projectPath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
-        
 
         private void login_Load(object sender, EventArgs e) {
             Btn_login.Enabled = false;
@@ -40,15 +48,27 @@ namespace MGControlDesktop {
             }
         }
 
-        void checkPwd() {
+        void checkCreden() {
             if (Txt_pwd.TextLength < 12) {
-                MessageBox.Show("Senha não cumpre os requisitos!\nRazão: Senha menor que 12 caracteres."
-                    , "Sistema informa!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Senha não cumpre os requisitos!\nRazão: Senha menor que 12 caracteres.", "Sistema informa!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            sqlConn = new NpgsqlConnection(sqlStrConn);
+            sqlConn.Open();
+            sqlStrCode = $"SELECT email, senha FROM seguranca WHERE email = '{Txt_email.Text}' AND (senha = crypt('{Txt_pwd.Text}', senha)) = true";
+
+            sqlCmd = new NpgsqlCommand(sqlStrCode, sqlConn);
+            sqlRead = sqlCmd.ExecuteReader();
+
+            if (sqlRead.Read()) {
+                new Monitoring().Show();
+            } else {
+                MessageBox.Show("Credenciais não encontrados!", "Sistema informa!");
             }
         }
 
         private void Btn_login_Click(object sender, EventArgs e) {
-            checkPwd();
+            checkCreden();
         }
     }
 }
