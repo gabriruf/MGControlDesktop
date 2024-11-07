@@ -119,3 +119,13 @@ C:\Users\ruff\Pictures\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesk
 C:\Users\ruff\Pictures\MGControlDesktop\MGControlDesktop\obj\Debug\MGContro.6A5AF667.Up2Date
 C:\Users\ruff\Pictures\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.exe
 C:\Users\ruff\Pictures\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.pdb
+C:\Users\autologon\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.csproj.AssemblyReference.cache
+C:\Users\autologon\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.login.resources
+C:\Users\autologon\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.Monitoring.resources
+C:\Users\autologon\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.Properties.Resources.resources
+C:\Users\autologon\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.csproj.GenerateResource.cache
+C:\Users\autologon\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.csproj.CoreCompileInputs.cache
+C:\Users\autologon\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.exe
+C:\Users\autologon\MGControlDesktop\MGControlDesktop\obj\Debug\MGControlDesktop.pdb
+C:\Users\autologon\Pictures\MGControlDesktop\MGControlDesktop\bin\Debug\BCrypt.Net.dll
+C:\Users\autologon\Pictures\MGControlDesktop\MGControlDesktop\bin\Debug\BCrypt.Net.xml

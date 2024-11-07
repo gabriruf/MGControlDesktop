@@ -33,7 +33,8 @@
             this.Txt_email = new System.Windows.Forms.TextBox();
             this.Txt_pwd = new System.Windows.Forms.TextBox();
             this.Btn_login = new System.Windows.Forms.Button();
-            this.Lbl_appTitle = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Lbl_email
@@ -89,33 +90,35 @@
             this.Btn_login.UseVisualStyleBackColor = true;
             this.Btn_login.Click += new System.EventHandler(this.Btn_login_Click);
             // 
-            // Lbl_appTitle
+            // pictureBox1
             // 
-            this.Lbl_appTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Lbl_appTitle.AutoSize = true;
-            this.Lbl_appTitle.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_appTitle.Location = new System.Drawing.Point(239, 38);
-            this.Lbl_appTitle.Name = "Lbl_appTitle";
-            this.Lbl_appTitle.Size = new System.Drawing.Size(323, 37);
-            this.Lbl_appTitle.TabIndex = 5;
-            this.Lbl_appTitle.Text = "MGControl Desktop";
-            this.Lbl_appTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackgroundImage = global::MGControlDesktop.Properties.Resources.logo_mgcontrol1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(239, -28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(384, 171);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Lbl_appTitle);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Btn_login);
             this.Controls.Add(this.Txt_pwd);
             this.Controls.Add(this.Txt_email);
             this.Controls.Add(this.Lbl_pwd);
             this.Controls.Add(this.Lbl_email);
             this.Name = "login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MGControl - Desktop (Login)";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.login_FormClosing);
             this.Load += new System.EventHandler(this.login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,7 +131,7 @@
         private System.Windows.Forms.TextBox Txt_email;
         private System.Windows.Forms.TextBox Txt_pwd;
         private System.Windows.Forms.Button Btn_login;
-        private System.Windows.Forms.Label Lbl_appTitle;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

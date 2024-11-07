@@ -16,7 +16,9 @@ namespace MGControlDesktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login());
+            login login = new login();
+            login.Show();
+            Application.Run();
         }
     }
 }

@@ -25,12 +25,11 @@
         private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.DataGrid_Funcionarios = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deslogarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.resetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.monitoraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.resetToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnStrip_delogin = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnStrip_reset = new System.Windows.Forms.ToolStripMenuItem();
             this.Btn_liberar = new System.Windows.Forms.Button();
             this.Btn_block = new System.Windows.Forms.Button();
             this.Lbl_credentials = new System.Windows.Forms.Label();
@@ -38,14 +37,18 @@
             this.Lbl_role = new System.Windows.Forms.Label();
             this.Lbl_dbUser = new System.Windows.Forms.Label();
             this.Lbl_dbRole = new System.Windows.Forms.Label();
+            this.npgsqlDataAdapter1 = new Npgsql.NpgsqlDataAdapter();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid_Funcionarios)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(472, 77);
+            this.label1.Location = new System.Drawing.Point(365, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(250, 25);
             this.label1.TabIndex = 0;
@@ -53,16 +56,28 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(477, 106);
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.DataGrid_Funcionarios);
+            this.panel1.Location = new System.Drawing.Point(370, 106);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(288, 266);
+            this.panel1.Size = new System.Drawing.Size(418, 266);
             this.panel1.TabIndex = 1;
+            // 
+            // DataGrid_Funcionarios
+            // 
+            this.DataGrid_Funcionarios.AllowUserToAddRows = false;
+            this.DataGrid_Funcionarios.AllowUserToDeleteRows = false;
+            this.DataGrid_Funcionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGrid_Funcionarios.Location = new System.Drawing.Point(0, 0);
+            this.DataGrid_Funcionarios.Name = "DataGrid_Funcionarios";
+            this.DataGrid_Funcionarios.Size = new System.Drawing.Size(418, 266);
+            this.DataGrid_Funcionarios.TabIndex = 0;
+            this.DataGrid_Funcionarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_Funcionarios_CellClick);
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.configuraçõesToolStripMenuItem,
-            this.monitoraçãoToolStripMenuItem});
+            this.configuraçõesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -72,40 +87,29 @@
             // configuraçõesToolStripMenuItem
             // 
             this.configuraçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deslogarToolStripMenuItem,
-            this.resetToolStripMenuItem});
+            this.btnStrip_delogin,
+            this.btnStrip_reset});
             this.configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
             this.configuraçõesToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
             this.configuraçõesToolStripMenuItem.Text = "Configurações";
             // 
-            // deslogarToolStripMenuItem
+            // btnStrip_delogin
             // 
-            this.deslogarToolStripMenuItem.Name = "deslogarToolStripMenuItem";
-            this.deslogarToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.deslogarToolStripMenuItem.Text = "Deslogar";
+            this.btnStrip_delogin.Name = "btnStrip_delogin";
+            this.btnStrip_delogin.Size = new System.Drawing.Size(120, 22);
+            this.btnStrip_delogin.Text = "Deslogar";
+            this.btnStrip_delogin.Click += new System.EventHandler(this.btnStrip_delogin_Click);
             // 
-            // resetToolStripMenuItem
+            // btnStrip_reset
             // 
-            this.resetToolStripMenuItem.Name = "resetToolStripMenuItem";
-            this.resetToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.resetToolStripMenuItem.Text = "Reset";
-            // 
-            // monitoraçãoToolStripMenuItem
-            // 
-            this.monitoraçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.resetToolStripMenuItem1});
-            this.monitoraçãoToolStripMenuItem.Name = "monitoraçãoToolStripMenuItem";
-            this.monitoraçãoToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
-            this.monitoraçãoToolStripMenuItem.Text = "Monitoração";
-            // 
-            // resetToolStripMenuItem1
-            // 
-            this.resetToolStripMenuItem1.Name = "resetToolStripMenuItem1";
-            this.resetToolStripMenuItem1.Size = new System.Drawing.Size(102, 22);
-            this.resetToolStripMenuItem1.Text = "Reset";
+            this.btnStrip_reset.Name = "btnStrip_reset";
+            this.btnStrip_reset.Size = new System.Drawing.Size(120, 22);
+            this.btnStrip_reset.Text = "Reset";
+            this.btnStrip_reset.Click += new System.EventHandler(this.btnStrip_reset_Click);
             // 
             // Btn_liberar
             // 
+            this.Btn_liberar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Btn_liberar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Btn_liberar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Btn_liberar.Location = new System.Drawing.Point(12, 194);
@@ -114,9 +118,11 @@
             this.Btn_liberar.TabIndex = 3;
             this.Btn_liberar.Text = "Liberar";
             this.Btn_liberar.UseVisualStyleBackColor = false;
+            this.Btn_liberar.Click += new System.EventHandler(this.Btn_liberar_Click);
             // 
             // Btn_block
             // 
+            this.Btn_block.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Btn_block.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Btn_block.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Btn_block.Location = new System.Drawing.Point(162, 194);
@@ -125,9 +131,11 @@
             this.Btn_block.TabIndex = 4;
             this.Btn_block.Text = "Bloquear";
             this.Btn_block.UseVisualStyleBackColor = false;
+            this.Btn_block.Click += new System.EventHandler(this.Btn_block_Click);
             // 
             // Lbl_credentials
             // 
+            this.Lbl_credentials.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Lbl_credentials.AutoSize = true;
             this.Lbl_credentials.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_credentials.Location = new System.Drawing.Point(84, 39);
@@ -138,6 +146,7 @@
             // 
             // Lbl_user
             // 
+            this.Lbl_user.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Lbl_user.AutoSize = true;
             this.Lbl_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_user.Location = new System.Drawing.Point(13, 89);
@@ -148,6 +157,7 @@
             // 
             // Lbl_role
             // 
+            this.Lbl_role.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Lbl_role.AutoSize = true;
             this.Lbl_role.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.Lbl_role.Location = new System.Drawing.Point(16, 135);
@@ -158,26 +168,37 @@
             // 
             // Lbl_dbUser
             // 
+            this.Lbl_dbUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Lbl_dbUser.AutoSize = true;
             this.Lbl_dbUser.Font = new System.Drawing.Font("Constantia", 13.75F);
-            this.Lbl_dbUser.Location = new System.Drawing.Point(98, 89);
+            this.Lbl_dbUser.Location = new System.Drawing.Point(106, 92);
             this.Lbl_dbUser.Name = "Lbl_dbUser";
             this.Lbl_dbUser.Size = new System.Drawing.Size(0, 23);
             this.Lbl_dbUser.TabIndex = 8;
             // 
             // Lbl_dbRole
             // 
+            this.Lbl_dbRole.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Lbl_dbRole.AutoSize = true;
             this.Lbl_dbRole.Font = new System.Drawing.Font("Constantia", 13.75F);
-            this.Lbl_dbRole.Location = new System.Drawing.Point(98, 135);
+            this.Lbl_dbRole.Location = new System.Drawing.Point(106, 140);
+            this.Lbl_dbRole.MaximumSize = new System.Drawing.Size(250, 0);
             this.Lbl_dbRole.Name = "Lbl_dbRole";
             this.Lbl_dbRole.Size = new System.Drawing.Size(0, 23);
             this.Lbl_dbRole.TabIndex = 9;
+            // 
+            // npgsqlDataAdapter1
+            // 
+            this.npgsqlDataAdapter1.DeleteCommand = null;
+            this.npgsqlDataAdapter1.InsertCommand = null;
+            this.npgsqlDataAdapter1.SelectCommand = null;
+            this.npgsqlDataAdapter1.UpdateCommand = null;
             // 
             // Monitoring
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Lbl_dbRole);
             this.Controls.Add(this.Lbl_dbUser);
@@ -191,7 +212,11 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Monitoring";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MGControl - Desktop (Monitoração)";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Monitoring_FormClosing);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid_Funcionarios)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -205,10 +230,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem configuraçõesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deslogarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem resetToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem monitoraçãoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem resetToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem btnStrip_delogin;
         private System.Windows.Forms.Button Btn_liberar;
         private System.Windows.Forms.Button Btn_block;
         private System.Windows.Forms.Label Lbl_credentials;
@@ -216,5 +238,8 @@
         private System.Windows.Forms.Label Lbl_role;
         private System.Windows.Forms.Label Lbl_dbUser;
         private System.Windows.Forms.Label Lbl_dbRole;
+        private System.Windows.Forms.DataGridView DataGrid_Funcionarios;
+        private Npgsql.NpgsqlDataAdapter npgsqlDataAdapter1;
+        private System.Windows.Forms.ToolStripMenuItem btnStrip_reset;
     }
 }
