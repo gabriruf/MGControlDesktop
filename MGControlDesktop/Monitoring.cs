@@ -13,15 +13,6 @@ using Npgsql;
 
 namespace MGControlDesktop {
     public partial class Monitoring : Form {
-        public Monitoring() {
-            InitializeComponent();
-
-            LoadData();
-
-            mainFont.AddFontFile($"{projectPath}/fonts/FiraSansRegular.ttf");
-            Lbl_dbRole.Font = new Font(mainFont.Families[0], 12, FontStyle.Regular);
-            Lbl_dbUser.Font = new Font(mainFont.Families[0], 12, FontStyle.Regular);
-        }
 
         public NpgsqlConnection sqlConn;
         public NpgsqlCommand sqlCmd;
@@ -32,6 +23,25 @@ namespace MGControlDesktop {
 
         private PrivateFontCollection mainFont = new PrivateFontCollection();
         private readonly string projectPath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
+
+        public Monitoring() {
+            InitializeComponent();
+        }
+
+        private void Monitoring_Load(object sender, EventArgs e) {
+            Lbl_dbUser.Text = String.Empty;
+            Lbl_dbRole.Text = String.Empty;
+            LoadDataSchool();
+
+            mainFont.AddFontFile($"{projectPath}/fonts/FiraSansRegular.ttf");
+            Lbl_dbRole.Font = new Font(mainFont.Families[0], 12, FontStyle.Regular);
+            Lbl_dbUser.Font = new Font(mainFont.Families[0], 12, FontStyle.Regular);
+            Lbl_copyright.Font = new Font(mainFont.Families[0], 9, FontStyle.Regular);
+        }
+
+        private void Monitoring_FormClosing(object sender, FormClosingEventArgs e) {
+            Application.Exit();
+        }
 
         private void Btn_liberar_Click(object sender, EventArgs e)
         {
@@ -47,8 +57,24 @@ namespace MGControlDesktop {
             Lbl_dbRole.Text = String.Empty;
         }
 
-        private void LoadData() {
-            sqlStrCode = "SELECT nome, cargo, email, empresa FROM funcionarios ORDER BY empresa ASC";
+        private void LoadDataCompany() {
+            sqlStrCode = "SELECT nome, cargo, email, empresa FROM funcEmpresa ORDER BY empresa ASC";
+
+            try {
+                using (sqlConn = new NpgsqlConnection(sqlStrConn)) {
+                    sqlConn.Open();
+                    sqlAdapter = new NpgsqlDataAdapter(sqlStrCode, sqlConn);
+                    DataTable dt = new DataTable();
+                    sqlAdapter.Fill(dt);
+                    DataGrid_Funcionarios.DataSource = dt;
+                }
+            } catch (Exception ex) {
+                MessageBox.Show("Um erro ocorreu: " + ex.Message);
+            }
+        }
+
+        private void LoadDataSchool() {
+            sqlStrCode = "SELECT nome, cargo, email, inst_educ FROM funcEscola ORDER BY inst_educ ASC";
 
             try {
                 using (sqlConn = new NpgsqlConnection(sqlStrConn)) {
@@ -87,8 +113,16 @@ namespace MGControlDesktop {
             Lbl_dbUser.Text = String.Empty;
         }
 
-        private void Monitoring_FormClosing(object sender, FormClosingEventArgs e) {
-            Application.Exit();
+        private void btnStrip_controlEmpresa_Click(object sender, EventArgs e) {
+            Lbl_dbUser.Text = String.Empty;
+            Lbl_dbRole.Text = String.Empty;
+            LoadDataCompany();
+        }
+
+        private void btnStrip_controlEscola_Click(object sender, EventArgs e) {
+            Lbl_dbUser.Text = String.Empty;
+            Lbl_dbRole.Text = String.Empty;
+            LoadDataSchool();
         }
     }
 }

@@ -38,6 +38,10 @@
             this.Lbl_dbUser = new System.Windows.Forms.Label();
             this.Lbl_dbRole = new System.Windows.Forms.Label();
             this.npgsqlDataAdapter1 = new Npgsql.NpgsqlDataAdapter();
+            this.Lbl_copyright = new System.Windows.Forms.Label();
+            this.sistemasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnStrip_controlEmpresa = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnStrip_controlEscola = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_Funcionarios)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -77,7 +81,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.configuraçõesToolStripMenuItem});
+            this.configuraçõesToolStripMenuItem,
+            this.sistemasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -96,14 +101,14 @@
             // btnStrip_delogin
             // 
             this.btnStrip_delogin.Name = "btnStrip_delogin";
-            this.btnStrip_delogin.Size = new System.Drawing.Size(120, 22);
+            this.btnStrip_delogin.Size = new System.Drawing.Size(180, 22);
             this.btnStrip_delogin.Text = "Deslogar";
             this.btnStrip_delogin.Click += new System.EventHandler(this.btnStrip_delogin_Click);
             // 
             // btnStrip_reset
             // 
             this.btnStrip_reset.Name = "btnStrip_reset";
-            this.btnStrip_reset.Size = new System.Drawing.Size(120, 22);
+            this.btnStrip_reset.Size = new System.Drawing.Size(180, 22);
             this.btnStrip_reset.Text = "Reset";
             this.btnStrip_reset.Click += new System.EventHandler(this.btnStrip_reset_Click);
             // 
@@ -194,12 +199,47 @@
             this.npgsqlDataAdapter1.SelectCommand = null;
             this.npgsqlDataAdapter1.UpdateCommand = null;
             // 
+            // Lbl_copyright
+            // 
+            this.Lbl_copyright.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Lbl_copyright.AutoSize = true;
+            this.Lbl_copyright.Font = new System.Drawing.Font("Fira Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_copyright.Location = new System.Drawing.Point(9, 427);
+            this.Lbl_copyright.Name = "Lbl_copyright";
+            this.Lbl_copyright.Size = new System.Drawing.Size(270, 14);
+            this.Lbl_copyright.TabIndex = 10;
+            this.Lbl_copyright.Text = "© 2024 MGControl, todos os direitos reservados";
+            // 
+            // sistemasToolStripMenuItem
+            // 
+            this.sistemasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnStrip_controlEmpresa,
+            this.btnStrip_controlEscola});
+            this.sistemasToolStripMenuItem.Name = "sistemasToolStripMenuItem";
+            this.sistemasToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.sistemasToolStripMenuItem.Text = "Sistemas";
+            // 
+            // btnStrip_controlEmpresa
+            // 
+            this.btnStrip_controlEmpresa.Name = "btnStrip_controlEmpresa";
+            this.btnStrip_controlEmpresa.Size = new System.Drawing.Size(180, 22);
+            this.btnStrip_controlEmpresa.Text = "CA - Empresas";
+            this.btnStrip_controlEmpresa.Click += new System.EventHandler(this.btnStrip_controlEmpresa_Click);
+            // 
+            // btnStrip_controlEscola
+            // 
+            this.btnStrip_controlEscola.Name = "btnStrip_controlEscola";
+            this.btnStrip_controlEscola.Size = new System.Drawing.Size(180, 22);
+            this.btnStrip_controlEscola.Text = "CA - Escolas";
+            this.btnStrip_controlEscola.Click += new System.EventHandler(this.btnStrip_controlEscola_Click);
+            // 
             // Monitoring
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Lbl_copyright);
             this.Controls.Add(this.Lbl_dbRole);
             this.Controls.Add(this.Lbl_dbUser);
             this.Controls.Add(this.Lbl_role);
@@ -215,6 +255,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MGControl - Desktop (Monitoração)";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Monitoring_FormClosing);
+            this.Load += new System.EventHandler(this.Monitoring_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_Funcionarios)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -241,5 +282,9 @@
         private System.Windows.Forms.DataGridView DataGrid_Funcionarios;
         private Npgsql.NpgsqlDataAdapter npgsqlDataAdapter1;
         private System.Windows.Forms.ToolStripMenuItem btnStrip_reset;
+        private System.Windows.Forms.Label Lbl_copyright;
+        private System.Windows.Forms.ToolStripMenuItem sistemasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnStrip_controlEmpresa;
+        private System.Windows.Forms.ToolStripMenuItem btnStrip_controlEscola;
     }
 }
