@@ -30,6 +30,9 @@
             this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnStrip_delogin = new System.Windows.Forms.ToolStripMenuItem();
             this.btnStrip_reset = new System.Windows.Forms.ToolStripMenuItem();
+            this.sistemasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnStrip_controlEmpresa = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnStrip_controlEscola = new System.Windows.Forms.ToolStripMenuItem();
             this.Btn_liberar = new System.Windows.Forms.Button();
             this.Btn_block = new System.Windows.Forms.Button();
             this.Lbl_credentials = new System.Windows.Forms.Label();
@@ -39,9 +42,6 @@
             this.Lbl_dbRole = new System.Windows.Forms.Label();
             this.npgsqlDataAdapter1 = new Npgsql.NpgsqlDataAdapter();
             this.Lbl_copyright = new System.Windows.Forms.Label();
-            this.sistemasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnStrip_controlEmpresa = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnStrip_controlEscola = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_Funcionarios)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -54,9 +54,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(365, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(250, 25);
+            this.label1.Size = new System.Drawing.Size(205, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Registros de Operações:";
+            this.label1.Text = "Painel de Registros:";
             // 
             // panel1
             // 
@@ -101,16 +101,39 @@
             // btnStrip_delogin
             // 
             this.btnStrip_delogin.Name = "btnStrip_delogin";
-            this.btnStrip_delogin.Size = new System.Drawing.Size(180, 22);
+            this.btnStrip_delogin.Size = new System.Drawing.Size(120, 22);
             this.btnStrip_delogin.Text = "Deslogar";
             this.btnStrip_delogin.Click += new System.EventHandler(this.btnStrip_delogin_Click);
             // 
             // btnStrip_reset
             // 
             this.btnStrip_reset.Name = "btnStrip_reset";
-            this.btnStrip_reset.Size = new System.Drawing.Size(180, 22);
+            this.btnStrip_reset.Size = new System.Drawing.Size(120, 22);
             this.btnStrip_reset.Text = "Reset";
             this.btnStrip_reset.Click += new System.EventHandler(this.btnStrip_reset_Click);
+            // 
+            // sistemasToolStripMenuItem
+            // 
+            this.sistemasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnStrip_controlEmpresa,
+            this.btnStrip_controlEscola});
+            this.sistemasToolStripMenuItem.Name = "sistemasToolStripMenuItem";
+            this.sistemasToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.sistemasToolStripMenuItem.Text = "Sistemas";
+            // 
+            // btnStrip_controlEmpresa
+            // 
+            this.btnStrip_controlEmpresa.Name = "btnStrip_controlEmpresa";
+            this.btnStrip_controlEmpresa.Size = new System.Drawing.Size(151, 22);
+            this.btnStrip_controlEmpresa.Text = "CA - Empresas";
+            this.btnStrip_controlEmpresa.Click += new System.EventHandler(this.btnStrip_controlEmpresa_Click);
+            // 
+            // btnStrip_controlEscola
+            // 
+            this.btnStrip_controlEscola.Name = "btnStrip_controlEscola";
+            this.btnStrip_controlEscola.Size = new System.Drawing.Size(151, 22);
+            this.btnStrip_controlEscola.Text = "CA - Escolas";
+            this.btnStrip_controlEscola.Click += new System.EventHandler(this.btnStrip_controlEscola_Click);
             // 
             // Btn_liberar
             // 
@@ -209,29 +232,6 @@
             this.Lbl_copyright.Size = new System.Drawing.Size(270, 14);
             this.Lbl_copyright.TabIndex = 10;
             this.Lbl_copyright.Text = "© 2024 MGControl, todos os direitos reservados";
-            // 
-            // sistemasToolStripMenuItem
-            // 
-            this.sistemasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnStrip_controlEmpresa,
-            this.btnStrip_controlEscola});
-            this.sistemasToolStripMenuItem.Name = "sistemasToolStripMenuItem";
-            this.sistemasToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.sistemasToolStripMenuItem.Text = "Sistemas";
-            // 
-            // btnStrip_controlEmpresa
-            // 
-            this.btnStrip_controlEmpresa.Name = "btnStrip_controlEmpresa";
-            this.btnStrip_controlEmpresa.Size = new System.Drawing.Size(180, 22);
-            this.btnStrip_controlEmpresa.Text = "CA - Empresas";
-            this.btnStrip_controlEmpresa.Click += new System.EventHandler(this.btnStrip_controlEmpresa_Click);
-            // 
-            // btnStrip_controlEscola
-            // 
-            this.btnStrip_controlEscola.Name = "btnStrip_controlEscola";
-            this.btnStrip_controlEscola.Size = new System.Drawing.Size(180, 22);
-            this.btnStrip_controlEscola.Text = "CA - Escolas";
-            this.btnStrip_controlEscola.Click += new System.EventHandler(this.btnStrip_controlEscola_Click);
             // 
             // Monitoring
             // 
